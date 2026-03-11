@@ -18,4 +18,14 @@ export const api = {
     if (!response.ok) throw new Error('API request failed');
     return response.json();
   },
+
+  put: async (endpoint, data) => {
+    const response = await fetch(`${API_BASE_URL}${endpoint}`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+    if (!response.ok) throw new Error('API request failed');
+    return response.json();
+  },
 };
