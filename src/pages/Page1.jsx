@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { api } from "../services/api";
-import Loading from "../components/Loading";
+import Loading from "../components/shared/Loading";
 import { Link } from "react-router-dom";
 
 const Page1 = () => {
@@ -44,7 +44,7 @@ const Page1 = () => {
 
   return (
     <>
-      <div class="container">
+      <div className="container">
         <h2>Post List</h2>
         <Link
           to={"/post/create"}
